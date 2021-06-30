@@ -34,3 +34,8 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
  --UC5-Deleting the contacts in addressbook
 
  delete from Addressbook where FirstName = 'Anu'
+
+ --UC6:-Ability to retrieve person from city or state
+
+ Insert into Addressbook values('Anu','Priya','hyd','karnataka','gadwal',590234,990877890,'anuhya@gmail.com');
+ select *from Addressbook where city='gadwal' or State = 'karnataka'
