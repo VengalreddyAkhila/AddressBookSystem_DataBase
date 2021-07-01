@@ -73,3 +73,10 @@ select *from Addressbook
 --UC10:-Ability to get the number of contactpersons
 
 select count(type) from Addressbook 
+
+--UC11:-Ability to add persons to both family and friend
+
+insert into Addressbook  values('Naveena','A','32-nagar','Ap','lonovola',343444,8494923493,'naveen@gmail.com','friend','classcontacts') ,
+('Rani','prajaktha','nagar','goa','raipur',509678,8907654345,'rani@gmail.com','family','roommate');
+
+select *from Addressbook 
