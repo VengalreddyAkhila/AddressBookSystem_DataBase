@@ -70,3 +70,6 @@ update Addressbook set  name = 'colleguecontacts' where FirstName = 'Shamu' or F
 --display addressbook
 select *from Addressbook 
 
+--UC10:-Ability to get the number of contactpersons
+
+select count(type) from Addressbook 
