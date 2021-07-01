@@ -43,3 +43,7 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
  --UC7:-Find the Size of the table
 
  select count (*)from Addressbook 
+ select distinct city,state
+ into #temp
+ from Addressbook ;
+ select count (*) from #temp 
