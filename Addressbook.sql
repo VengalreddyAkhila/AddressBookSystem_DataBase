@@ -30,10 +30,12 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
  --UC4:-Editing the contacts in addressbook
 
  Update Addressbook set state = 'maharastra' where FirstName = 'Akhila'
+ select *from AddressBook 
 
  --UC5-Deleting the contacts in addressbook
 
- delete from Addressbook where FirstName = 'Anu'
+ delete from Addressbook where FirstName = 'Ramu'
+ select *from Addressbook 
 
  --UC6:-Ability to retrieve person from city or state
 
@@ -49,5 +51,22 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
  select count (*) from #temp 
 
  --UC8:-sort the entries according to alphabetically by city
-
+ --Ascending order
  select *from Addressbook ORDER BY city asc
+ --Descending order
+ select *from Addressbook ORDER BY state desc
+
+ --UC9-Identify each addressbook with name and type
+
+Alter Table Addressbook Add
+type varchar(255),
+name varchar(32);
+
+update Addressbook set type = 'Teacher' where FirstName = 'Akhila' or FirstName ='Ramu'
+update Addressbook set name = 'friendsContacts' where FirstName = 'Akhila' or FirstName = 'Anu'
+update Addressbook set type = 'Friend' where FirstName = 'Anu'
+update Addressbook set type = 'Family' where FirstName = 'Shamu'
+update Addressbook set  name = 'colleguecontacts' where FirstName = 'Shamu' or FirstName = 'Ramu'
+--display addressbook
+select *from Addressbook 
+
