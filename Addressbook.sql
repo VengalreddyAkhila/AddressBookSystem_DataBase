@@ -47,3 +47,7 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
  into #temp
  from Addressbook ;
  select count (*) from #temp 
+
+ --UC8:-sort the entries according to alphabetically by city
+
+ select *from Addressbook ORDER BY city asc
