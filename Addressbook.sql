@@ -39,3 +39,7 @@ Insert into Addressbook(FirstName,LastName,Address,State,City,Zipcode,PhoneNumbe
 
  Insert into Addressbook values('Anu','Priya','hyd','karnataka','gadwal',590234,990877890,'anuhya@gmail.com');
  select *from Addressbook where city='gadwal' or State = 'karnataka'
+
+ --UC7:-Find the Size of the table
+
+ select count (*)from Addressbook 
